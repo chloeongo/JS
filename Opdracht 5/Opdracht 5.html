@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="css.css" />
+  </head>
+  <body>
+    <button onclick="randomNumbers()">Gooien!</button>
+    <p id="printNumbers"></p>
+    <p id="numberAmount"></p>
+    <script>
+      function randomNumbers() {
+        const numbers = [];
+        for (let i = 0, t = 5; i < t; i++) {
+          numbers.push(Math.round(Math.random() * t + 1));
+        }
+        document.getElementById("printNumbers").innerHTML = numbers;
+        countNumber(6, numbers);
+      }
+      function countNumber(number, array) {
+        let count = 0;
+        for (let i = 0; i < array.length; i++) {
+          if (array[i] === number) {
+            count++;
+          }
+        }
+        document.getElementById("numberAmount").innerHTML =
+          "Aantal keer " + number + " gegooid: " + count;
+      }
+    </script>
+  </body>
+</html>
