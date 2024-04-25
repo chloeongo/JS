@@ -1,0 +1,15 @@
+<script>
+  const studenten = [
+    { naam: "Jan", cijfer: 7 },
+    { naam: "Piet", cijfer: 8 },
+    { naam: "Klaas", cijfer: 6 },
+    { naam: "Marie", cijfer: 9 },
+  ];
+  function filter(studenten) {
+    console.log(studenten.filter((studenten) => studenten.cijfer >= 8));
+  }
+
+  const studentenAcht = [];
+  studentenAcht.push(filter(studenten));
+  console.log(studentenAcht);
+</script>
